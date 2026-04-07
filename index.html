@@ -25,7 +25,21 @@
     <script>
         let attempt_counter = 0;
         function authenticate(){
+            let username = document.getElementById
+            ("user").value;
+            let pwd = document.getElementById("pass").value;
+            let granted = "Welcome " + username + "!";
+            let denied = "Access denied. Account locked after 3 attempts!";
 
+        while (attempt_counter < 3) {
+            if (username === "tjj_0x" && pwd === "11232011") {
+                alert(granted);
+                attempt_counter = 0; // reset attempts after successful login
+                document.getElementById("display").innerHTML = "";
+                window.location.href = "dashboard.html";
+
+                break; // stop loop
+            } 
         }
     </script>
 
