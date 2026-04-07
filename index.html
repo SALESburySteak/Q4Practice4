@@ -8,19 +8,18 @@
 </head>
 <body>
     <form>
-        <label for="user">Username</label>
+        <label for="uname">Username</label>
             <br>
-            <input type="text" id="user" class="form-control" placeholder="Enter here" required>
+            <input type="text" id="uname" class="form-control" placeholder="Enter here" required>
             <br>
-        <label for="pass">Password</label>
+        <label for="pwd">Password</label>
             <br>
-            <input type="password" id="pass" class="form-control" placeholder="Enter here" required>
+            <input type="password" id="pwd" class="form-control" placeholder="Enter here" required>
             <br>
 
         <p id="display"></p>
 
         <br>
-
         <input type="button" name="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
 
         <input type="reset" name="reset" id="cancel" value="Cancel" class="btn btn-info rounded-5">
@@ -30,14 +29,14 @@
         let attempt_counter = 0;
         function authenticate(){
             let username = document.getElementById
-            ("user").value;
-            let pwd = document.getElementById("pass").value;
+            ("uname").value;
+            let pwd = document.getElementById("pwd").value;
             let granted = "Welcome " + username + "!";
             let denied = "Access denied. Account locked after 3 attempts!";
         }
 
         while (attempt_counter < 3) {
-            if (username === "tjj_0x" && pwd === "11232011") {
+            if (username === "tjj_0x" && pwd === "tjj_0x") {
                 alert(granted);
                 attempt_counter = 0; // reset attempts after successful login
                 document.getElementById("display").innerHTML = "";
